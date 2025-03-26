@@ -1,10 +1,20 @@
-import { Tabs } from "expo-router";
+import { Stack, Tabs } from "expo-router";
 
-export default function TabLayout(){
+export default function StackLayout(){
     return(
-        <Tabs>
-            <Tabs.Screen name="index/index" 
+        <Stack
+            screenOptions={
+                {
+                    headerShown: false
+                }
+            }
+        >
+            <Stack.Screen name="index/index" 
             options={{title: "Inicio"}}/>
-        </Tabs>
+
+            <Stack.Screen
+            name="produto/index"
+            options={{title: "Produto"}}/>
+        </Stack>
     )
 }
